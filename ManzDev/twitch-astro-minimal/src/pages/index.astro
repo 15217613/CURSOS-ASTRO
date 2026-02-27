@@ -1,0 +1,74 @@
+---
+import NavBar from "@/components/NavBar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Sticker from "@/components/Sticker.astro";
+import stickers from "@/data/stickers.json";
+import AstroHeart from "@/components/AstroHeart.astro";
+import manzdevGrr from "@/assets/manzdev-grr.gif";
+import "@fontsource-variable/merienda";
+import "@/styles/global.css";
+
+/*
+const data = await fetch("https://randomuser.me/api").then((response) =>
+	response.json(),
+);
+
+console.log(data);
+*/
+
+console.log("Estoy en el servidor");
+---
+
+<style>
+	/*
+	@font-face {
+		font-family: Merienda;
+		src: url("fonts/merienda-vf.ttf");
+	}
+	*/
+
+	.stickers-collection {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	/* Cuando se hace con pnpm solo es de esta forma sin el font-face */
+	h1 {
+		font-family: "Merienda Variable";
+	}
+</style>
+
+<script>
+	// Import from npm package.
+	import confetti from "canvas-confetti";
+
+	const button = document.querySelector(".celebrate-button");
+
+	button?.addEventListener("click", () => {
+		confetti();
+	});
+</script>
+
+<BaseLayout title="Home" description="Home page">
+	<h1>Astro - Pagina Principal</h1>
+
+	<button class="celebrate-button">Celebrate</button>
+
+	<div class="bg-slate-900 text-white">Hola a todos</div>
+
+	<div class="stickers-collection">
+		{stickers.map((sticker) => <Sticker data={sticker} />)}
+	</div>
+
+	<img
+		src={manzdevGrr.src}
+		width={manzdevGrr.width}
+		height={manzdevGrr.height}
+		alt={"ManzDev Grr (" + manzdevGrr.format + ")"}
+	/>
+
+	<!-- <AstroHeart heart="💙" /> -->
+
+	<NavBar />
+</BaseLayout>

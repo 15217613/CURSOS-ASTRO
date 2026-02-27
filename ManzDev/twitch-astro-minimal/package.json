@@ -1,0 +1,23 @@
+{
+  "name": "twitch-astro-minimal",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "deploy": "gh-pages -d dist",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/merienda": "^5.2.7",
+    "@fontsource/merienda": "^5.2.7",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.16.0",
+    "canvas-confetti": "^1.9.4",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

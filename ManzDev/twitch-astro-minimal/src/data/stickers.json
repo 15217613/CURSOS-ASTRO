@@ -1,0 +1,27 @@
+[
+    {
+        "name": "ManzDance",
+        "url": "https://manz.dev/assets/stickers/manzdevdance.gif",
+        "category": "streamer"
+    },
+    {
+        "name": "KappaHonk",
+        "url": "https://manz.dev/assets/stickers/kappahonk.gif",
+        "category": "streamer"
+    },
+    {
+        "name": "JakePerro",
+        "url": "https://manz.dev/assets/stickers/jakeperro.png",
+        "category": "hora-de-aventura"
+    },
+    {
+        "name": "HomerManz",
+        "url": "https://manz.dev/assets/stickers/homer-manz.png",
+        "category": "simpsons"
+    },
+    {
+        "name": "CoffeeWithManz",
+        "url": "https://manz.dev/assets/stickers/coffee-with-manz.gif",
+        "category": "streamer"
+    }
+]
